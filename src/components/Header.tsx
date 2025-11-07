@@ -8,10 +8,10 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'Features', href: '#features' },
-    { name: 'Reviews', href: '#reviews' },
-    { name: 'Pricing', href: '#pricing' },
+    // { name: 'Reviews', href: '#reviews' },
+    // { name: 'Pricing', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Join Wait List', href: '#waitlist' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -62,28 +62,15 @@ const Header: React.FC = () => {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <FiSun className="w-5 h-5 text-dark-text-primary" />
-              ) : (
-                <FiMoon className="w-5 h-5 text-light-text-primary" />
-              )}
-            </button>
-
             {/* Auth Buttons - Desktop */}
-            <div className="hidden md:flex items-center space-x-3">
+            {/* <div className="hidden md:flex items-center space-x-3">
               <button className="px-5 py-2 text-base font-medium text-brand hover:text-brand-hover transition-colors">
                 Login
               </button>
               <button className="px-5 py-2 text-base font-medium bg-brand hover:bg-brand-hover text-white rounded-lg transition-colors shadow-md">
                 Register
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
             <button
@@ -95,6 +82,19 @@ const Header: React.FC = () => {
                 <FiX className="w-6 h-6 text-light-text-primary dark:text-dark-text-primary" />
               ) : (
                 <FiMenu className="w-6 h-6 text-light-text-primary dark:text-dark-text-primary" />
+              )}
+            </button>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? (
+                <FiSun className="w-5 h-5 text-dark-text-primary" />
+              ) : (
+                <FiMoon className="w-5 h-5 text-light-text-primary" />
               )}
             </button>
           </div>
@@ -114,14 +114,14 @@ const Header: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-light-border dark:border-dark-border">
+              {/* <div className="flex flex-col space-y-2 pt-4 border-t border-light-border dark:border-dark-border">
                 <button className="px-5 py-2 text-base font-medium text-brand hover:text-brand-hover transition-colors text-left">
                   Login
                 </button>
                 <button className="px-5 py-2 text-base font-medium bg-brand hover:bg-brand-hover text-white rounded-lg transition-colors shadow-md">
                   Register
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

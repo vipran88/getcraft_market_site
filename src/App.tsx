@@ -3,9 +3,10 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
+// import Testimonials from './components/Testimonials';
+// import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
+import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -16,9 +17,11 @@ const App: React.FC = () => {
         <main>
           <Hero />
           <Features />
-          <Testimonials />
-          <Pricing />
+          {/* <Testimonials /> */}
+          {/* <Pricing /> */}
+          <Waitlist />
           <FAQ />
+         
         </main>
         <Footer />
       </div>

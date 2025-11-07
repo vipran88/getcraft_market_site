@@ -4,11 +4,11 @@ import { FiFacebook, FiTwitter, FiInstagram, FiSend } from 'react-icons/fi';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
+  /* const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'Reviews', href: '#reviews' },
+      // { name: 'Pricing', href: '#pricing' },
+      // { name: 'Reviews', href: '#reviews' },
       { name: 'Changelog', href: '#' },
       { name: 'Roadmap', href: '#' },
     ],
@@ -26,15 +26,15 @@ const Footer: React.FC = () => {
       { name: 'Community', href: '#' },
       { name: 'Contact Support', href: '#contact' },
     ],
-  };
+  }; */
 
   return (
-    <footer id="contact" className="bg-[#1b1b18] text-gray-300 pt-16 pb-8">
+    <footer className="bg-[#1b1b18] text-gray-300 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="mb-12">
           {/* Company Info */}
-          <div>
+          <div className="max-w-md">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-brand rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">G</span>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Product Links */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold text-lg mb-4">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
@@ -92,10 +92,10 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Company Links */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
@@ -109,10 +109,10 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Support Links */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold text-lg mb-4">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
