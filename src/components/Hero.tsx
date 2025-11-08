@@ -31,10 +31,10 @@ const Hero: React.FC = () => {
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-dark-bg transition-colors">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="text-center lg:text-left">
+          <div className="lg:col-span-2 text-center lg:text-left">
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-light-text-primary dark:text-dark-text-primary mb-6">
               Bulk Edit Your Etsy Listings{' '}
@@ -69,13 +69,20 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right Column - Hero Image */}
-          <div className="relative">
+          <div className="lg:col-span-3 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-light-border dark:border-dark-border">
-              <img
-                src="/hero.png"
-                alt="GetCraft Dashboard - Manage your Etsy listings efficiently"
-                className="w-full h-auto"
-              />
+              <picture>
+                <source srcSet="/hero.webp" type="image/webp" />
+                <img
+                  src="/hero.png"
+                  alt="GetCraft Dashboard - Manage your Etsy listings efficiently"
+                  className="w-full h-auto"
+                  width="1200"
+                  height="750"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </picture>
             </div>
           </div>
         </div>
