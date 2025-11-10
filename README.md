@@ -157,6 +157,35 @@ Each component is self-contained with its content. Edit the respective component
 3. **Analytics**: Add Google Analytics or similar tracking
 4. **SEO**: Update meta tags in `index.html` for your domain
 
+## Deployment
+
+### Deploy to Coolify (Recommended for VPS)
+
+This project is ready for deployment with Coolify on any VPS:
+
+**Quick Start:**
+1. See `COOLIFY_QUICKSTART.md` for a fast-track guide
+2. See `DEPLOYMENT_GUIDE.md` for comprehensive step-by-step instructions
+
+**What's Included:**
+- ✅ Dockerfile (multi-stage build)
+- ✅ Nginx configuration (optimized for production)
+- ✅ Docker Compose for local testing
+- ✅ Complete deployment guides
+
+**Test Locally with Docker:**
+```bash
+docker-compose up
+# Visit http://localhost:3000
+```
+
+### Other Deployment Options
+
+- **Vercel**: `vercel --prod`
+- **Netlify**: `netlify deploy --prod`
+- **GitHub Pages**: Build and deploy `dist` folder
+- **AWS S3 + CloudFront**: Upload `dist` folder to S3 bucket
+
 ## Browser Support
 
 - Chrome (last 2 versions)
