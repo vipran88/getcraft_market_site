@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { useTheme } from '../contexts/ThemeContext';
+import { handleSmoothNavigation } from '../utils/scroll';
 
 const Header: React.FC = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -15,19 +16,7 @@ const Header: React.FC = () => {
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80; // Header height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setIsMenuOpen(false);
-    }
+    handleSmoothNavigation(e, href, () => setIsMenuOpen(false));
   };
 
   return (

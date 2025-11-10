@@ -1,33 +1,9 @@
 import React from 'react';
+import { scrollToElement } from '../utils/scroll';
 
 const Hero: React.FC = () => {
-  const handleGetStarted = () => {
-    const element = document.querySelector('#waitlist');
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const handleLearnMore = () => {
-    const element = document.querySelector('#features');
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
+  const handleGetStarted = () => scrollToElement('waitlist');
+  const handleLearnMore = () => scrollToElement('features');
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-light-bg dark:bg-dark-bg transition-colors">
